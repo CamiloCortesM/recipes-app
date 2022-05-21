@@ -9,10 +9,12 @@ const RoutesApp = () => {
     <Router>
       <div>
         <NavRecipes />
+        <div className="container">
         <Routes>
           <Route path="/add" element={<AddRecipes />} />
           <Route path="/" element={<ShowRecipes />} />
         </Routes>
+        </div>
       </div>
     </Router>
   );
