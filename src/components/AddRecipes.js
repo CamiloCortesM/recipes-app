@@ -108,7 +108,7 @@ const AddRecipes = () => {
       <button type="submit" className="btn btn-primary">
         Submit
       </button>
-      <div className="btn btn-warning  m-3" onClick={handleClear}>Clear</div>
+      <div className="btn btn-secondary  m-3" onClick={handleClear}>Clear</div>
     </form>
   );
 };
