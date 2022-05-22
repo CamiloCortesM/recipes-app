@@ -6,6 +6,7 @@ body {
 }
 nav{
   background-color: #7532f9;
+  box-shadow: 5px 9px 20px #bbbbbb;
 }
 nav h2{
   margin: 0;
@@ -17,12 +18,67 @@ nav li:hover{
 .container{
   margin-top: 20px;
   min-height: 500px;
+
   display: flex;
+  
   justify-content: center;
-  align-items: center;
 }
 
 form{
   min-width: 60%;
+}
+
+.Container-Card{
+  width: 90%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.Card-Recipes{
+  height: 300px;
+  width: 25%;
+  margin: 20px;
+  border: 1px solid rgb(144, 144, 144);
+  cursor: pointer;
+}
+.Card-Recipes:hover{
+  box-shadow: 5px 9px 1px #f0f0f0;
+
+}
+
+.Card-Img{
+  width: 100%;
+  height: 170px;
+}
+.Container-Card img{
+  width: 100%;
+  height: 100%;
+}
+
+.Card-Name{
+  width: 100%;
+  height: 50px;
+}
+
+.Card-Name h2{
+  padding-top: 10px;
+  padding-left:10px;
+  font-size: 1.3rem;
+  font-family:cursive;
+  font-style: oblique;
+  text-decoration:underline;
+}
+
+.Card-Fotter{
+  width: 100%;
+  height: 75px;
+}
+
+.Card-Fotter p{
+  font-size: 0.85rem;
+  padding-left:10px;
+  font-family:cursive;
+  overflow:hidden;
 }
 
