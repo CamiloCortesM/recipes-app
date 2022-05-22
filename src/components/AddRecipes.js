@@ -1,45 +1,11 @@
-import React, { useContext, useState } from "react";
-import { ContextRecipes } from "../hooks/ContextRecipes";
+import React from "react";
+import useForm from "../hooks/useForm";
+
 
 const AddRecipes = () => {
-
-    const { recipes, setRecipes} = useContext(ContextRecipes)
-
-  const [input, setInput] = useState({
-    name: "",
-    ingredients: "",
-    img: "",
-    descrip: "",
-  });
-
+  const {input,handleClear,handleInputChange,handleSubmit} = useForm();
   const { name, ingredients, img, descrip } = input;
-  const handleSubmit = (e) => {
-    e.preventDefault();
 
-    setRecipes([...recipes,{
-        name,
-        ingredients,
-        img,
-        descrip
-    }])
-  };
-
-  const handleInputChange = ({ target }) => {
-    console.log(target.name);
-    setInput({
-      ...input,
-      [target.name]: target.value,
-    });
-  };
-
-  const handleClear = () => [
-    setInput({
-      name: "",
-      ingredients: "",
-      img: "",
-      descrip: "",
-    }),
-  ];
   return (
     <form onSubmit={handleSubmit}>
       <div className="mb-3">
@@ -108,7 +74,9 @@ const AddRecipes = () => {
       <button type="submit" className="btn btn-primary">
         Submit
       </button>
-      <div className="btn btn-secondary  m-3" onClick={handleClear}>Clear</div>
+      <div className="btn btn-secondary  m-3" onClick={handleClear}>
+        Clear
+      </div>
     </form>
   );
 };
