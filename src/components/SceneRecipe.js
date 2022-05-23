@@ -7,6 +7,10 @@ const SceneRecipe = () => {
   const { recipes } = useContext(ContextRecipes);
   const UniqueRecipe = recipes.filter((recipe) => recipe.id === parseInt(id));
   const { name, ingredients, img , descrip} = UniqueRecipe[0];
+  const SplitString =(data)=>{
+    return data.split(',');
+  }
+  console.log(SplitString(ingredients));
   return (
     <div className="Scene-Recipe">
       <div className="Section-Name">
@@ -16,7 +20,13 @@ const SceneRecipe = () => {
         <img src={img} alt={name} />
       </div>
       <div className="Section-Ingredients">
-        {ingredients}
+      <ul>
+        {
+          SplitString(ingredients).map((data,i)=>(
+            <li key={i}>{data}</li>
+          ))
+        }
+      </ul>
       </div>
       <div className="Section-Descrip">
         {descrip}
