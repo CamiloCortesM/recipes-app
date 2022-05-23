@@ -5,10 +5,12 @@ import CardRecipes from "./CardRecipes";
 const ShowRecipes = () => {
   const { recipes } = useContext(ContextRecipes);
 
+
+
   return (
     <div className="Container-Card">
       {recipes.map((data) => (
-        <CardRecipes key={data.id}data={data}/>
+        <CardRecipes key={data.id}data={data} />
       ))}
     </div>
   );
