@@ -107,13 +107,16 @@ form {
 }
 
 .Section-Ingredients{
-  margin: 20px;
+  width: 30%;
+  float: left;
+  margin: 30px;
   background-color: #ebebeb;
   padding: 20px;
   border: #7532f9 2px dashed;
 }
 .Section-Descrip{
-  margin: 20px;
+  white-space: pre-line;
+  margin: 30px;
   font-size: 1rem;
   font-family:cursive;
 }
