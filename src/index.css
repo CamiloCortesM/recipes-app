@@ -58,6 +58,7 @@ form {
   width: 100%;
 }
 
+
 .Card-Name h2 {
   font-family: cursive;
   font-size: 1.3rem;
@@ -73,4 +74,46 @@ form {
   text-overflow: ellipsis;
   width: 100%;
   white-space: nowrap;
+}
+
+.Scene-Recipe{
+  width: 100%;
+  margin: 20px;
+}
+
+.Section-Name{
+  width: 100%;
+  text-align: center;
+  padding: 1px;
+  margin-bottom: 20px;
+}
+
+.Section-Name h1{
+  font-size: 2rem;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.Section-Img{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.Section-Img img{
+  width: 50%;
+  border:#b6b6b6 2px solid;
+}
+
+.Section-Ingredients{
+  margin: 20px;
+  background-color: #ebebeb;
+  padding: 20px;
+  border: #7532f9 2px dashed;
+}
+.Section-Descrip{
+  margin: 20px;
+  font-size: 1rem;
+  font-family:cursive;
 }
