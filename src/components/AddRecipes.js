@@ -1,9 +1,8 @@
 import React from "react";
 import useForm from "../hooks/useForm";
 
-
 const AddRecipes = () => {
-  const {input,handleClear,handleInputChange,handleSubmit} = useForm();
+  const { input, handleClear, handleInputChange, handleSubmit } = useForm();
   const { name, ingredients, img, descrip } = input;
 
   return (
