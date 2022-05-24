@@ -1,16 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
-import { ContextRecipes } from "../hooks/ContextRecipes";
+import useRecipe from "../hooks/useRecipe";
 
 const SceneRecipe = () => {
   const { id } = useParams();
-  const { recipes } = useContext(ContextRecipes);
-  const UniqueRecipe = recipes.filter((recipe) => recipe.id === parseInt(id));
-  const { name, ingredients, img , descrip} = UniqueRecipe[0];
-  const SplitString =(data)=>{
-    return data.split(',');
-  }
-  console.log(SplitString(ingredients));
+  const { UniRecipe, SplitString } = useRecipe(id);
+  const { name, img, ingredients, descrip } = UniRecipe;
   return (
     <div className="Scene-Recipe">
       <div className="Section-Name">
@@ -20,17 +15,13 @@ const SceneRecipe = () => {
         <img src={img} alt={name} />
       </div>
       <div className="Section-Ingredients">
-      <ul>
-        {
-          SplitString(ingredients).map((data,i)=>(
+        <ul>
+          {SplitString(ingredients).map((data, i) => (
             <li key={i}>{data}</li>
-          ))
-        }
-      </ul>
+          ))}
+        </ul>
       </div>
-      <div className="Section-Descrip">
-        {descrip}
-      </div>
+      <div className="Section-Descrip">{descrip}</div>
     </div>
   );
 };
