@@ -30,6 +30,7 @@ form {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
   width: 90%;
 }
 
@@ -40,6 +41,7 @@ form {
   margin: 20px;
   width: 25%;
 }
+
 .Card-Recipes:hover {
   box-shadow: 5px 9px 1px #f0f0f0;
 }
@@ -119,4 +121,41 @@ form {
   margin: 30px;
   font-size: 1rem;
   font-family:cursive;
+
+}
+
+@media ( max-width:1000px ) {
+  
+  .Card-Recipes{
+    width: 30%;
+  }
+  
+}
+
+@media ( max-width:900px ) {
+  
+  .Card-Recipes{
+    width: 43%;
+  }
+  
+}
+
+@media ( max-width:750px ) {
+  
+  .Section-Ingredients{
+    float: none;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .Section-Img img{
+    width: 80%;
+  }
+  
+}
+@media ( max-width:500px ) {
+  
+  .Card-Recipes{
+    width: 80%;
+  }
+  
 }
